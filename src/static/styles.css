@@ -24,6 +24,26 @@ header {
   border-radius: 5px;
 }
 
+.header-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px 10px;
+}
+
+.auth-toggle {
+  background: #ffffff;
+  color: #1a237e;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 18px;
+}
+
+.auth-status {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #e8eaf6;
+}
+
 header h1 {
   margin-bottom: 10px;
 }
@@ -33,12 +53,6 @@ main {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-}
-
-@media (min-width: 768px) {
-  main {
-    grid-template-columns: 2fr 1fr;
-  }
 }
 
 section {
@@ -74,7 +88,6 @@ section h3 {
   margin-bottom: 8px;
 }
 
-/* New styles for participants section */
 .participants-container {
   margin-top: 15px;
   padding-top: 12px;
@@ -100,7 +113,6 @@ section h3 {
   justify-content: space-between;
 }
 
-/* Remove the bullet point pseudo-element */
 .participants-section ul li::before {
   display: none;
 }
@@ -162,6 +174,39 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: min(100%, 380px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.close-modal {
+  background: transparent;
+  color: #666;
+  padding: 0;
+  font-size: 20px;
 }
 
 .message {
